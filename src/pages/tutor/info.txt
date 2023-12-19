@@ -1,0 +1,20 @@
+<h1>TutorHome</h1>
+        <nav>
+            <Link to="/tutor/checkinggrades">Revisar Calificaciones</Link>
+            <Link to="/tutor/tutordashboard">Panel del tutor</Link>
+        </nav>
+
+<Drawer
+        variant="permanent"
+        anchor="left"
+    >
+        <List>
+            <ListItem button component={Link} to="/tutor/checkinggrades">
+                <ListItemText primary="Revisar Calificaciones" />
+            </ListItem>
+                <ListItem button component={Link} to="/tutor/tutordashboard">
+            <ListItemText primary="Panel del tutor" />
+            </ListItem>
+        </List>
+
+    </Drawer>

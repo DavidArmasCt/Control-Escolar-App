@@ -1,5 +1,4 @@
-import { Drawer, List, ListItem, ListItemText } from "@mui/material"
-import { Link } from "react-router-dom"
+
 import { MenuItemComponent } from "../components/MenuItemComponent"
 
 export const SideBarSuperAdmin = () => {

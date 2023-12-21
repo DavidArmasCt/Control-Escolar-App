@@ -4,9 +4,11 @@ import { SideBarAssistant } from "../../assets/SideBarAssistant"
 
 export const AssistantHome = () => {
   return (
-    <PageLayout>
-      <Outlet/>
+    <>  
+      <PageLayout>
       <SideBarAssistant/>
-    </PageLayout>
+        <Outlet/>
+      </PageLayout>
+    </>
   )
 }

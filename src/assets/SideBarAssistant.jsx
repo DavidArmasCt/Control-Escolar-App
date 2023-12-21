@@ -1,25 +1,12 @@
-import { Drawer, List, ListItem, ListItemText } from "@mui/material"
-import { Link } from "react-router-dom"
+import { MenuItemComponent } from "../components/MenuItemComponent"
 
 export const SideBarAssistant = () => {
-  
-    return (
-        <Drawer
-            variant="permanent"
-            anchor="left"
-        >
-            <List>
-                <ListItem component={Link} to="/assistant/assistantdashboard">
-                    <ListItemText primary="Dashboard" />
-                </ListItem>
-                <ListItem component={Link} to="/assistant/checkinggroup">
-                    <ListItemText primary="Revisar Grupos" />
-                </ListItem>
-                <ListItem component={Link} to="/assistant/checkingstudent">
-                    <ListItemText primary="Revisar Estudiantes" />
-                </ListItem>
-            </List>
+  return (
+    <div>
+            <MenuItemComponent to="/assistant/addstudent" label="Añador Estudiante"/>
+            <MenuItemComponent to="/assistant/dashboard" label="Dashboard"/>
+            <MenuItemComponent to="/assistant/admindashboard" label="Panel de Administración"/>
+    </div>
     
-        </Drawer>
-      )
+  )
 }

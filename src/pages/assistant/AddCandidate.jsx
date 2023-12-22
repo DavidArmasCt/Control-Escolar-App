@@ -4,7 +4,7 @@ import { startSavingStudent } from "../../store/assistant"
 import { useDispatch } from "react-redux"
 
 
-export const AddStudent = () => {
+export const AddCandidate = () => {
   
 
   const studentsRoute = '/Control-Escolar-DB/Usuarios/Estudiantes';

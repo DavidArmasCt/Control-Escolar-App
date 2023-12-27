@@ -12,10 +12,10 @@ export const startSavingStudent = (formData, route) => {
     }
 }
 
-export const startStudentsList = ()=>{
+export const startStudentsList = (route)=>{
     return async (dispatch) => {
         try {
-          const usuariosCollection = collection(FirebaseDB, '/Control-Escolar-DB/Usuarios/Estudiantes');
+          const usuariosCollection = collection(FirebaseDB, route);
     
           const querySnapshot = await getDocs(usuariosCollection);
           const students = [];

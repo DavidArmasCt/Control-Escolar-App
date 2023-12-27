@@ -9,7 +9,7 @@ export const AssistantRouter = () => {
         <Route path="/" element={<AssistantHome/>}>
           <Route path="/addcandidate" element={<AddCandidate/>}/>
           <Route path="/checkinggroup" element={<CheckingGroup/>}/>
-          <Route path="/checkingstudent" element={<CheckingStudents/>}/>
+          <Route path="/checkingstudents" element={<CheckingStudents/>}/>
         </Route>
       </Routes>
   )

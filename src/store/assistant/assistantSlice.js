@@ -22,6 +22,7 @@ export const assistantSlice = createSlice({
         TutorLastNameP: null,
         TutorLastNameM: null,
         TutorUniqueID: null,
+        students: [],
     },
     reducers: {
         savingStudent: (state, action) => {
@@ -46,7 +47,7 @@ export const assistantSlice = createSlice({
         },
 
         gettingStudents: (state, action)=>{
-            state.users = action.payload;
+            state.students = action.payload;
         }
     }
 });

@@ -18,16 +18,16 @@
     
     
       return (
-        <div>
-          <h2>Lista de Usuarios:</h2>
-          <ul>
+        <div className="cardContainer">
             {students.map((student) => (
-              <li key={student.id}>
+              <div className="studentResumeCard" key={student.id}>
+                <div className="Avatar-Container">
+
+                </div>
                 {student.Name} {student.LastNameP} {student.LastNameM}
                 {/* Mostrar otros campos del usuario según sea necesario */}
-              </li>
+              </div>            
             ))}
-          </ul>
         </div>
       )
     }

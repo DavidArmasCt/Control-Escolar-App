@@ -50,6 +50,7 @@ html {
     padding: 50px;
     border-radius: 10px;
     box-shadow: 3px 4px 9px -2px rgba(0, 0, 0, 0.75);
+    overflow-y: scroll;
 }
 
 .titleContent {
@@ -66,4 +67,29 @@ html {
     flex-direction: row;
     gap: 10px;
     margin: 10px;
+}
+
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    height: 90%;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 3px 4px 9px -2px rgba(0, 0, 0, 0.75);
+    overflow: auto;
+}
+.studentResumeCard {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin: 10px;
+    box-shadow: 3px 4px 9px -2px rgba(0, 0, 0, 0.75);
+}
+.Avatar-Container{
+    width: 45px;
+    height: 45px;
+    box-shadow: 3px 4px 9px -2px rgba(0, 0, 0, 0.75);
 }

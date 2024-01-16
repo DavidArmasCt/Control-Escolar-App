@@ -1,3 +1,5 @@
 export * from './SideBarTutor'
 export * from './SideBarSuperAdmin'
 export * from './SideBarTeacher'
+export * from './SideBarAdmin'
+export * from './SideBarAssistant'

@@ -1,12 +1,20 @@
-import React from 'react'
-
+import { useEffect } from 'react'
+import { getAcademicInfo } from '../../store/admin/thunks'
+import { useDispatch, useSelector } from 'react-redux'
 export const Period = () => {
+  
+  const dispatch = useDispatch()
+  useEffect(()=>{
+    dispatch(getAcademicInfo())
+  },[dispatch])
+  const academicData = useSelector((state) => state.admin.CurrentAcademicYear)
+  
+  
+  
+  
   return (
-    <ul>
-        <li>Crear ciclo escolar</li>
-        <li>Cerrar ciclo escolar</li>
-        <li>Verificación de datos actuales</li>
-        <li>Modificacion de datos</li>
-    </ul>
+    <div>
+      <h2>{academicData}</h2>
+    </div>
   )
 }

@@ -9,10 +9,10 @@ export const adminSlice = createSlice({
         Grades: [],
         CurrentGeneration: null,
     },
-    reducers: {
-       getAcademicInfo: (state, action)=>{
-        state.CurrentAcademicYear = action.CurrentAcademicYear;
-        state.CurrentPeriod = action.CurrentPeriod;
+    reducers: {        
+
+       getInitialAcademicInfo: (state, action)=>{
+        state.CurrentAcademicYear = action.payload.CurrentAcademicYear;
        }, 
        setPeriod: (state, action)=>{
         state.CurrentPeriod = action.payload.CurrentPeriod;
@@ -29,4 +29,4 @@ export const adminSlice = createSlice({
 
 
 // Action creators are generated for each case reducer function
-export const { setPeriod, setNewAcademicYear, setSubjects } = adminSlice.actions;
+export const { getInitialAcademicInfo, setPeriod, setNewAcademicYear, setSubjects } = adminSlice.actions;

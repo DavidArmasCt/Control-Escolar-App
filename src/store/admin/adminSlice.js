@@ -5,14 +5,18 @@ export const adminSlice = createSlice({
     initialState: {
         CurrentAcademicYear: null,
         CurrentPeriod: null,
-        Subjects: [],
         Grades: [],
+        Groups: [],
         CurrentGeneration: null,
     },
     reducers: {        
 
        getInitialAcademicInfo: (state, action)=>{
         state.CurrentAcademicYear = action.payload.CurrentAcademicYear;
+        state.CurrentGeneration = action.payload.CurrentGeneration;
+        state.CurrentPeriod = action.payload.CurrentPeriod;
+        state.Grades = action.payload.Grades;
+        state.Groups = action.payload.Groups;
        }, 
        setPeriod: (state, action)=>{
         state.CurrentPeriod = action.payload.CurrentPeriod;

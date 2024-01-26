@@ -13,7 +13,7 @@ export const Period = () => {
   
   
   return (
-    <div>
+    <div className="contentForm">
       <h2>{academicData}</h2>
     </div>
   )

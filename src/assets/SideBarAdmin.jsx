@@ -6,6 +6,7 @@ export const SideBarAdmin = () => {
         <MenuItemComponent to="/admin/adminteachers" label="Administrar Maestros"/>
         <MenuItemComponent to="/admin/checkingteachers" label="Revisar Información de Profesores"/>
         <MenuItemComponent to="/admin/period" label="Ciclo Escolar"/>
+        <MenuItemComponent to="/admin/createperiod" label="Crear Periodo"/>
     </div>
   )
 }

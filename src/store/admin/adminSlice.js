@@ -8,6 +8,7 @@ export const adminSlice = createSlice({
         Grades: [],
         Groups: [],
         CurrentGeneration: null,
+        FormApproved: null
     },
     reducers: {        
 
@@ -26,6 +27,9 @@ export const adminSlice = createSlice({
        },
        setSubjects: (state, action) => {
         state.Subjects = action.payload.Subjects;
+       },
+       getFormApprovation: (state, action)=>{
+        state.FormApproved = action.payload.FormApproved
        }
     }
 
@@ -33,4 +37,4 @@ export const adminSlice = createSlice({
 
 
 // Action creators are generated for each case reducer function
-export const { getInitialAcademicInfo, setPeriod, setNewAcademicYear, setSubjects } = adminSlice.actions;
+export const { getInitialAcademicInfo, setPeriod, setNewAcademicYear, setSubjects, getFormApprovation } = adminSlice.actions;

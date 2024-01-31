@@ -39,18 +39,16 @@ export const getFormAproval = ()=>{
   }
 }
 
-export const setNewAcademicYear = ()=>{
+export const setNewAcademicYear = (formData)=>{
   return async(dispatch, getState)=>{
     const verificationQuery = await getDocs(query(collection(FirebaseDB,'/Control-Escolar-DB/Informacion-Curricular/Administracion-Escolar/'),where('Active', '==', true)));
     
-    if(verificationQuery.empty()){
+
       /*Realizar funcion de agregado de datos */
       const newACademicInfoRoute = doc(collection(FirebaseDB, '/Control-Escolar-DB/Informacion-Curricular/Administracion-Escolar'))
       const addNewAcademicInfo = await setDoc(newACademicInfoRoute, formData)
       console.log("Realizado con exito.")
-    }else{
-      console.log("La accion que intentas realizar no es posible mientras tengas un periodo activo")
-    }
+      console.log(addNewAcademicInfo)
   }
 }
 

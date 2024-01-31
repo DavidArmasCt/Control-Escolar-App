@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux" 
 import { useEffect } from "react"
 import { getFormAproval } from "../../store/admin/thunks"
-
+import { FalsePeriod, TruePeriod } from "./"
 
 export const CreateNewPeriod = () => {
   
@@ -21,10 +21,10 @@ export const CreateNewPeriod = () => {
     <div className="contentForm">
       {writtingValidation ? 
       (
-        <h1>Comienza el formulario de generación de nuevo ciclo escolar</h1>
+        <TruePeriod/>
       ):
       (
-        <h1>Existe un ciclo previamente abierto</h1>
+        <FalsePeriod/>
       )}
     </div>
   )

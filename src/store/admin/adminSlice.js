@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 export const adminSlice = createSlice({
     name: 'admin',
     initialState: {
+        Active: null,
         CurrentAcademicYear: null,
         CurrentPeriod: null,
         Grades: [],
@@ -24,6 +25,7 @@ export const adminSlice = createSlice({
        },
        setNewAcademicYear: (state, action)=>{
         state.CurrentAcademicYear = action.payload.CurrentAcademicYear;
+        state.Active = action.payload.Active;
        },
        setSubjects: (state, action) => {
         state.Subjects = action.payload.Subjects;
